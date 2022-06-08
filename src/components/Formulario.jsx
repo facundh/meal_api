@@ -22,6 +22,7 @@ const Formulario = () => {
         }
 
         setAlert('');
+        getBebidas(search);
     }
     return(
         <Form onSubmit={handleSubmit}>

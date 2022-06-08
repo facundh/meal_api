@@ -18,7 +18,7 @@ const MealsProvider = ({children}) => {
     }
 
     return(
-        <MealsContext.Provider value ={{getMeals}}>
+        <MealsContext.Provider value ={{getMeals, meals}}>
             { children }
         </MealsContext.Provider>
     )
