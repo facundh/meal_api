@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form, Row, Col, Alert } from 'react-bootstrap';
 import { useCategories } from '../hooks/useCategory';
+import { useMeals } from '../hooks/useMeals';
 
 const Formulario = () => {
-    const {categories} = useCategories()
+    const {categories} = useCategories();
+    const {getMeals} = useMeals();
 
     const [search, setSearch] = useState({
         name: '',
