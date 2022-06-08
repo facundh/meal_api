@@ -1,10 +1,11 @@
 import React from 'react'
 import Formulario from './Formulario'
+import Header from './Header'
 
 const Principal = () => {
   return (
     <>
-        <h1 className='text-center mt-3'>Pagina Principal</h1>
+        <Header />
         <Formulario />
     </>
   )
