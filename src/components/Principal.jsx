@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import Formulario from './Formulario'
 import Header from './Header'
 import MealsList from './MealsList'
+import ModalMeal from './ModalMeal'
 
 const Principal = () => {
   return (
@@ -12,6 +13,7 @@ const Principal = () => {
            
         <Formulario />
         <MealsList />
+        <ModalMeal />
         </Container>
     </>
   )

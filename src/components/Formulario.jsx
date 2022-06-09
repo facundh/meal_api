@@ -8,7 +8,6 @@ const Formulario = () => {
     const {getMeals} = useMeals();
 
     const [search, setSearch] = useState({
-        name: '',
         category: ''
     });
     const [alert, setAlert] = useState('');
@@ -22,31 +21,21 @@ const Formulario = () => {
         }
 
         setAlert('');
-        getBebidas(search);
+        getMeals(search);
     }
     return(
         <Form onSubmit={handleSubmit}>
             {alert && <Alert variant='info' className='text-center'>{alert}</Alert>}
             <Row>
-                <Col md={6}>
-                    <Form.Group className='mb-3'>
-                        <Form.Label htmlFor='name'>Meal`s Name</Form.Label>
-                        <Form.Control 
-                            id='name'
-                            type='text'
-                            placeholder='Ej: Fresh sardines'
-                            name='name'
-                            value={search.name}
-                            onChange={e => setSearch({
-                                ...search,
-                                [e.target.name]: e.target.value
-                            })}
-                        />
-                    </Form.Group>
-                </Col>
-                <Col md={6}>
+                
+                <Col md={6} className='w-100 mb-5'>
                     <Form.Label htmlFor='category'>Category</Form.Label>
-                    <Form.Select id='category' name='category'>
+                    <Form.Select id='category' name='category' value={search.category}
+                    onChange={e => setSearch({
+                        ...search,
+                        [e.target.name]: e.target.value
+                    })
+                }>
                         <option value="">-- Select Category --</option>
                         {
                             categories.map(category => (
@@ -57,6 +46,15 @@ const Formulario = () => {
                         }
                     </Form.Select>
                 </Col>
+            </Row>
+
+            <Row className='justify-content-center w-100'>
+                <Col md={3}>
+                    <Button variant='info' className='text-uppercase w-100' type='submit'>
+                        Select your meal
+                    </Button>
+                </Col>
+
             </Row>
         </Form>
     )

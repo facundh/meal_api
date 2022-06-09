@@ -4,11 +4,12 @@ import { useMeals } from '../hooks/useMeals';
 import Meal from './Meal';
 
 const MealsList = () => {
-    const {meals} = useMeals()
+    const {comidas} = useMeals();
+    
   return (
 
-    <Row>
-        {meals.map(meal => (
+    <Row className='mt-4'>
+        {comidas.map(meal => (
             <Meal key={meal.idMeal} meal={meal}/>
         ))}
     </Row>
