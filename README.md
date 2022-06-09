@@ -32,6 +32,8 @@ HTML, CSS, Javascript, React JS, React-Bootstrap, Axios.
 
 API https://www.themealdb.com/api.php
 
+Demo: https://meals-api.netlify.app/
+
 Autor ✒️.
 
 Facundo Emmanuel Herrera
